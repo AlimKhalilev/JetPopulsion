@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-height: 22000px;
+    --rocket-translate-y: 260px;
+}
+
+body {
+    margin: 0;
+    max-height: 100vh;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+main {
+    height: var(--background-height);
+    background: url("background.jpg") 50% 100% no-repeat;
+    background-size: cover;
+    /* background-position-y: calc((var(--background-height) * -1) + 100vh); */
+}
+
+img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, calc(var(--rocket-translate-y) * -1));
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 2rem;
+}
+
+form label {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+form label:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+form label .input_block span {
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+
+form label input {
+    width: 70%;
+}
+
+form label input:disabled {
+    color: #fff;
+}
+
+form label span {
+    margin-bottom: 0.2rem;
+}
+
+form button {
+    margin-top: 0.5rem;
+}

@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Rocket move</title>
 </head>
 <body>
-    Привет!
+    <main>
+        <img src="rocket.png" alt="Ракета">
+        <form>
+            <label>
+                <span>Масса аппарата</span>
+                <div class="input_block">
+                    <input type="number" id="rocketMass" value="0">
+                    <abbr>кг</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Масса топлива</span>
+                <div class="input_block">
+                    <input type="number" id="fuelMass" value="0">
+                    <abbr>кг</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Общая масса</span>
+                <div class="input_block">
+                    <input type="number" id="fuelAndRocketMass" value="0" disabled>
+                    <abbr>кг</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Сгорание топлива</span>
+                <div class="input_block">
+                    <input type="number" id="fuelCombustionSpeed" value="0">
+                    <abbr>кг/c</abbr>
+                    <span>W - увеличить<br>S - уменьшить</span>
+                </div>
+            </label>
+            <label>
+                <span>Скорость струи</span>
+                <div class="input_block">
+                    <input type="number" id="reactiveJetVelocity" value="0">
+                    <abbr>м/с</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Расстояние</span>
+                <div class="input_block">
+                    <input type="number" id="distance" value="0">
+                    <abbr>м</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Скорость</span>
+                <div class="input_block">
+                    <input type="number" id="speed" value="0">
+                    <abbr>м/с</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Реактивная тяга</span>
+                <div class="input_block">
+                    <input type="number" id="reactiveThrust" value="0" disabled>
+                    <abbr>кН</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Сила тяжести</span>
+                <div class="input_block">
+                    <input type="number" id="weight" value="0" disabled>
+                    <abbr>кН</abbr>
+                </div>
+            </label>
+            <label>
+                <span>Ускорение</span>
+                <div class="input_block">
+                    <input type="number" id="acceleration" value="0" disabled>
+                    <abbr>м/с<sup>2</sup></abbr>
+                </div>
+            </label>
+            <label>
+                <span>Ускорение (g)</span>
+                <div class="input_block">
+                    <input type="number" id="gravityAcceleration" value="0">
+                    <abbr>м/с<sup>2</sup></abbr>
+                </div>
+            </label>
+            <button id="start">Полетели!</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
