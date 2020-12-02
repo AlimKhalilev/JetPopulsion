@@ -4,7 +4,7 @@ const time_update = 0.01; // время обновления кадра
 
 document.addEventListener("DOMContentLoaded", onPageLoad); // событие при загрузке страницы
 document.onkeydown = checkKey; // увеличение и уменьшение сгорания топлива
-document.querySelector("#start").addEventListener("click", onStart); // событие по нажатию старт
+document.querySelector("form").addEventListener("submit", onStart); // событие по нажатию старт
 
 let rocketMass = 5000; // Сухая масса ракеты (без топлива)
 let fuelMass = 3000; // Масса топлива (текущая)
@@ -75,7 +75,9 @@ function onChangeFrame() {
     
 }
 
-function onStart() { // когда нажимаем кнопку старт
+function onStart(event) { // когда нажимаем кнопку старт
+    event.preventDefault(); // отменяем перезагрузку страницы
+
     timerId = setInterval(onChangeFrame, time_update * 1000);
 
     rocketMass = Number(document.querySelector("#rocketMass").value);
